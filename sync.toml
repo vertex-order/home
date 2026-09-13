@@ -1,0 +1,44 @@
+# sync.toml — cross-repo file sync. Read by scripts/sync.py (`just sync`).
+# See AGENTS.md → "Cross-repo sync" and CONTRIBUTING.md.
+#
+# [subscribe.*] — what THIS repo vendors FROM elsewhere. sync.py fetches these
+#                 at `ref` and writes them into the tree. Vendored copies —
+#                 never hand-edit them here; edit them in the owning repo (kit).
+#                 check-vendored.yml fails the PR if any has drifted.
+#
+# This repo publishes nothing — it owns no file another repo vendors. It's
+# the org landing page: a plain link list (site/data/{games,movies,books}.js)
+# plus an FAQ, so it only needs a slice of kit's build substrate — no
+# platform icons, no series/media components, no floating nav.
+#
+# Not vendored, even though this repo needs its own: .github/ISSUE_TEMPLATE/*
+# and .github/PULL_REQUEST_TEMPLATE.md. Each necessarily carries this repo's
+# own Discussions URL (and PR-checklist lines), so a byte-identical vendor is
+# impossible by construction. Seeded from kit's copies once, then maintained
+# locally.
+
+[subscribe.kit]
+repo = "vertex-order/kit"
+ref  = "main"   # pin to a commit SHA / tag for reproducibility: `just sync-update kit`
+paths = [
+  "site/_ds/",
+  "site/support.js",
+  "site/FAQ.dc.html",
+  "site/ThemeToggle.dc.html",
+  "scripts/bundle-components.py",
+  "scripts/sync.py",
+  "scripts/normalize-svg.py",
+  "scripts/strip-c2pa.py",
+  "scripts/trim-svg.py",
+  "svgo.config.mjs",
+  "justfile",
+  ".editorconfig",
+  ".gitattributes",
+  ".claude/settings.json",
+  "CODE_OF_CONDUCT.md",
+  ".githooks/pre-commit",
+  ".github/workflows/check-generated.yml",
+  ".github/workflows/check-vendored.yml",
+  ".github/workflows/static.yml",
+  ".github/dependabot.yml",
+]

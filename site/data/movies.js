@@ -1,0 +1,20 @@
+// Movie & TV franchises. Each entry: { title, by (optional), href (optional), firstPublished (optional year) }.
+window.MOVIE_FRANCHISES = [
+  { title: "Alien / Predator" },
+  { title: "DC Cinematic Universe (DCU)" },
+  { title: "Doctor Who" },
+  { title: "Ghostbusters" },
+  { title: "Indiana Jones", by: "George Lucas" },
+  { title: "James Bond", by: "Ian Fleming" },
+  { title: "Jurassic Park", by: "Michael Crichton" },
+  { title: "Law & Order" },
+  { title: "Marvel Cinematic Universe (MCU)" },
+  { title: "Mission Impossible" },
+  { title: "Planet of the Apes", by: "Pierre Boulle" },
+  { title: "Star Trek", by: "Gene Roddenberry" },
+  { title: "Star Wars", by: "George Lucas" },
+  { title: "Stargate" },
+  { title: "The Fast & Furious" },
+  { title: "The Matrix", by: "The Wachowskis" },
+  { title: "Transformers" },
+];

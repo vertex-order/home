@@ -1,0 +1,21 @@
+# .gitignore (Git — Ignore List)
+
+# scratch space for fresh Claude Design exports before extracting into site/
+_reference/
+_references/
+
+# workflow build output (generated in CI, never committed)
+build/
+
+# auto-generated thumbnail cache
+.thumbnail
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+
+site/github.md
+site/CLAUDE.md
+site/.claude/
+site/uploads/
+site/*.png
