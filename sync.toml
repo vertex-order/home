@@ -25,6 +25,7 @@ paths = [
   "site/support.js",
   "site/BackToTop.dc.html",
   "site/FAQ.dc.html",
+  "site/Footer.dc.html",
   "site/ThemeToggle.dc.html",
   "scripts/bundle-components.py",
   "scripts/sync.py",

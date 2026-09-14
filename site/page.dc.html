@@ -132,8 +132,7 @@ a:hover { color: var(--color-accent); text-decoration: underline; }
 
     <div style="height: 1px; background: linear-gradient(to right, transparent, var(--color-neutral-700), transparent); margin: var(--space-8) 0 var(--space-6);"></div>
 
-    <p style="color: var(--color-neutral-600); font-size: 11px; margin: 0;">&copy; 2026 Vertex Industries, with help from the community. <a href="https://github.com/vertex-order/vertex-order.github.io/blob/main/LICENSE" target="_blank" rel="noopener" style="color: var(--color-neutral-500);">MIT licensed</a>.</p>
-    <p style="color: var(--color-neutral-600); font-size: 11px; margin: var(--space-2) 0 0;">Not affiliated with any of the above brands, franchises, companies, or people.</p>
+    <dc-import name="Footer" license="{{ footerLicense }}" show-fair-use="{{ false }}" hint-size="auto,100px" style="display: block;"></dc-import>
   </div>
 </div>
 
@@ -156,6 +155,7 @@ class Component extends DCLogic {
       movies: liveFirst(window.MOVIE_FRANCHISES || []),
       books: liveFirst(window.BOOK_FRANCHISES || []),
       faqItems: window.FAQ_ITEMS || [],
+      footerLicense: [{ text: 'MIT licensed', url: 'https://github.com/vertex-order/vertex-order.github.io/blob/main/LICENSE' }],
     };
   }
 }
