@@ -32,13 +32,14 @@ The authoritative record of third-party parts used in this project — the
 - **Terms:** [MIT](https://github.com/vertex-order/kit/blob/main/LICENSE)
 - **Modification:** none — never hand-edited here (see `sync.toml`)
 
-## Theme-toggle icon
+## Interface icons & UI chrome
 
-The theme-toggle icon and the component that renders it
-(`site/ThemeToggle.dc.html`, vendored from kit) are **not owned here** —
-recorded in [vertex-order/kit](https://github.com/vertex-order/kit)'s
-[NOTICE.md](https://github.com/vertex-order/kit/blob/main/NOTICE.md)
-("Interface icons" → "sun / moon (ThemeToggle.dc.html)"), not repeated here.
+The theme toggle, back-to-top control, and the components that render them
+(`site/ThemeToggle.dc.html`, `site/BackToTop.dc.html`) are owned by
+[vertex-order/kit](https://github.com/vertex-order/kit) and pulled in via
+[`sync.toml`](sync.toml). Their sources and terms are recorded in that
+repo's
+[NOTICE.md](https://github.com/vertex-order/kit/blob/main/NOTICE.md).
 
 ## Franchise-card arrow icon
 
