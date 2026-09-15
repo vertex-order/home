@@ -6,7 +6,7 @@ window.FAQ_ITEMS = [
     a: [
       { parts: [
         { text: "This is a serious commitment — we don't want half-finished pages live. Building a new list can easily take 10+ hours, and some, like Final Fantasy, have taken over 100. If you're still interested, or want to help with an existing list, head to that list's discussion page, or the " },
-        { text: "organization discussion page", url: "https://github.com/orgs/vertex-order/discussions" },
+        { text: "organization discussion page", url: window.SITE_CONFIG.discussionsUrl },
         { text: " if we don't have a list for it yet. The placeholders are just suggestions; we'd welcome others too." },
       ] },
     ],
@@ -18,7 +18,7 @@ window.FAQ_ITEMS = [
         { text: "We're always looking for simple small " },
         { em: "original" },
         { text: " fan art to go alongside entries in the lists (with full in-place attribution), or for behind the cards on this page (footer attribution), and rotate through multiples when we can. Hand-drawn or digitally painted (Photoshop, tablet, etc.) work is welcome, but we'd prefer to avoid AI-generated art for now. Head to that list's discussion page, or the " },
-        { text: "organization discussion page", url: "https://github.com/orgs/vertex-order/discussions" },
+        { text: "organization discussion page", url: window.SITE_CONFIG.discussionsUrl },
         { text: ", to tell us about your work." },
       ] },
       { parts: [
