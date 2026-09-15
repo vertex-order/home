@@ -20,6 +20,8 @@ window.BOOK_FRANCHISES = [
   { title: "The Sword of Truth", by: "Terry Goodkind" },
   { title: "The Wheel of Time", by: "Robert Jordan" },
   { title: "The Witcher", by: "Andrzej Sapkowski" },
+  { title: "The Wonderful Wizard of Oz", by: "L. Frank Baum" },
+  { title: "Thursday Next", by: "Jasper Fforde" },
   { title: "Tolkien's legendarium" },
   { title: "Vorkosigan Saga", by: "Lois McMaster Bujold" },
 ];
