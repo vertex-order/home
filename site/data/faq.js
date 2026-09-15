@@ -1,7 +1,10 @@
 // FAQ content for the page's FAQ section. Each item's `a` is an array of paragraphs: a plain
 // string, or {parts:[...]} where each part is {text}, {em}, or {text, url} for a link.
+// Every entry needs a stable, hand-picked `id` (kebab-case) — it becomes the question's
+// #faq-<id> pilcrow anchor, so never derive it from the question text or array index.
 window.FAQ_ITEMS = [
   {
+    id: "contribute-list",
     q: "Interested in contributing to, updating, or starting a new franchise order list?",
     a: [
       { parts: [
@@ -12,6 +15,7 @@ window.FAQ_ITEMS = [
     ],
   },
   {
+    id: "fan-art",
     q: "Have fan art you want to share with our community?",
     a: [
       { parts: [
