@@ -132,7 +132,7 @@ a:hover { color: var(--color-accent); text-decoration: underline; }
 
     <div style="height: 1px; background: linear-gradient(to right, transparent, var(--color-neutral-700), transparent); margin: var(--space-8) 0 var(--space-6);"></div>
 
-    <dc-import name="Footer" license="{{ footerLicense }}" show-fair-use="{{ false }}" hint-size="auto,100px" style="display: block;"></dc-import>
+    <dc-import name="Footer" credits="{{ footerCredits }}" license="{{ footerLicense }}" show-fair-use="{{ false }}" hint-size="auto,100px" style="display: block;"></dc-import>
   </div>
 </div>
 
@@ -155,6 +155,9 @@ class Component extends DCLogic {
       movies: liveFirst(window.MOVIE_FRANCHISES || []),
       books: liveFirst(window.BOOK_FRANCHISES || []),
       faqItems: window.FAQ_ITEMS || [],
+      footerCredits: [
+        { parts: [{ text: 'See ' }, { text: 'NOTICE', url: 'https://github.com/vertex-order/vertex-order.github.io/blob/main/NOTICE.md' }, { text: ' for third-party components.' }] },
+      ],
       footerLicense: [{ text: 'This page is ' }, { text: 'MIT', url: 'https://github.com/vertex-order/vertex-order.github.io/blob/main/LICENSE' }, { text: ' licensed.' }],
     };
   }
