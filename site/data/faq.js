@@ -2,6 +2,7 @@
 // string, or {parts:[...]} where each part is {text}, {em}, or {text, url} for a link.
 // Every entry needs a stable, hand-picked `id` (kebab-case) — it becomes the question's
 // #faq-<id> pilcrow anchor, so never derive it from the question text or array index.
+// schema: faq.schema.json
 window.FAQ_ITEMS = [
   {
     id: "contribute-list",

@@ -1,4 +1,5 @@
 // Book franchises. Each entry: { title, by (optional), href (optional), firstPublished (optional year) }.
+// schema: franchise-list.schema.json
 window.BOOK_FRANCHISES = [
   { title: "A Song of Ice and Fire", by: "George R. R. Martin" },
   { title: "Cosmere", by: "Brandon Sanderson" },

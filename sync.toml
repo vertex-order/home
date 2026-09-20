@@ -19,7 +19,7 @@
 
 [subscribe.kit]
 repo = "vertex-order/kit"
-ref = "29f6415ddaf02e03b1a5b832939e7bcd62df51e4"
+ref = "fab81950029dd55b00c49b749337f494d626e73e"
 paths = [
   "docs/cache.md",
   "schemas/faq.schema.json",
@@ -39,6 +39,7 @@ paths = [
   "scripts/sync.py",
   "scripts/js_literal.py",
   "scripts/validate-data.py",
+  "scripts/check-dedup-drift.py",
   "scripts/normalize-svg.py",
   "scripts/restore-headers.py",
   "scripts/ensure-helmets.py",
@@ -64,6 +65,7 @@ paths = [
   ".github/workflows/check-generated.yml",
   ".github/workflows/check-vendored.yml",
   ".github/workflows/check-data.yml",
+  ".github/workflows/check-dedup-drift.yml",
   ".github/workflows/check-css.yml",
   ".github/workflows/check-syntax.yml",
   ".github/workflows/sync-repin.yml",

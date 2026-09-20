@@ -1,4 +1,5 @@
 // Movie & TV franchises. Each entry: { title, by (optional), href (optional), firstPublished (optional year) }.
+// schema: franchise-list.schema.json
 window.MOVIE_FRANCHISES = [
   { title: "Alien / Predator" },
   { title: "DC Cinematic Universe (DCU)" },

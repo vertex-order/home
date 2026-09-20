@@ -1,4 +1,5 @@
 // Game franchises. Each entry: { title, by (optional), href (optional link to a full order-list site), firstPublished (optional year) }.
+// schema: franchise-list.schema.json
 window.GAME_FRANCHISES = [
   { title: "Assassin's Creed", by: "Ubisoft" },
   { title: "Bravely Default", by: "Square Enix" },
