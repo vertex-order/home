@@ -22,8 +22,14 @@ kit.
 
 `site/data/{games,movies,books}.js` each assign a plain `window.*_FRANCHISES`
 array — `{ title, href?, by?, firstPublished? }`, `href` omitted for a
-placeholder entry. `site/data/faq.js` holds the FAQ copy
-(`window.FAQ_ITEMS`). `site/page.dc.html` renders all of it and is the
+placeholder entry. Schema: `schemas/franchise-list.schema.json` (own to
+this repo, not vendored — kit has no equivalent). `site/data/site.js` →
+`window.SITE_CONFIG`, schema `schemas/site.schema.json` (also own to this
+repo — a much smaller shape than kit's list-repo `SITE_CONFIG`).
+`site/data/faq.js` holds the FAQ copy (`window.FAQ_ITEMS`), schema
+`schemas/faq.schema.json` (vendored from kit — this repo's FAQ_ITEMS
+happens to match kit's list-repo shape exactly). `site/page.dc.html`
+renders all of it and is the
 entry page, same convention as every other Vertex Order repo —
 `bundle-components.py` (vendored from kit) detects it by content (any
 `*.dc.html` that references `components.js`), not by name, so nothing here

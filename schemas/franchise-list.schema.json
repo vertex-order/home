@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "franchise-list.schema.json",
+  "description": "Owned by this repo, not vendored from kit -- org-specific. Shared shape for window.GAME_FRANCHISES (site/data/games.js), window.MOVIE_FRANCHISES (site/data/movies.js), and window.BOOK_FRANCHISES (site/data/books.js) -- all three are the same array-of-franchise shape, just rendered into a different card list. `href` omitted renders an unlinked placeholder card.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "title": { "type": "string", "minLength": 1 },
+      "by": {
+        "type": "string",
+        "description": "Creator/studio, e.g. \"Square Enix\". Shown as \"by <by>\"."
+      },
+      "href": {
+        "type": "string",
+        "description": "Link to that franchise's own Vertex Order list. Omit for a placeholder entry with no list yet."
+      },
+      "firstPublished": {
+        "type": ["integer", "string"],
+        "description": "Year. Shown after `by` (\"by <by> · <firstPublished>\") -- only rendered when `by` is also set."
+      }
+    },
+    "required": ["title"],
+    "additionalProperties": false
+  }
+}

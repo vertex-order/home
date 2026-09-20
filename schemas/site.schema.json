@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "site.schema.json",
+  "description": "Owned by this repo, not vendored from kit -- org-specific. The window.SITE_CONFIG value in site/data/site.js. Distinct, much smaller shape from a list repo's SITE_CONFIG (kit's site-config.schema.json) -- no tagline/license/entities/storagePrefix here, this page has no franchise to disclaim affiliation with or checklist state to namespace.",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "discussionsUrl": {
+      "type": "string",
+      "description": "Org-wide GitHub Discussions URL, read directly by site/data/faq.js's answers."
+    }
+  },
+  "required": ["title"],
+  "additionalProperties": false
+}
