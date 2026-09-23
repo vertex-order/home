@@ -11,6 +11,7 @@ window.MOVIE_FRANCHISES = [
   { title: "Law & Order" },
   { title: "Marvel Cinematic Universe (MCU)" },
   { title: "Mission Impossible" },
+  { title: "Nikita", by: "Luc Besson" },
   { title: "Planet of the Apes", by: "Pierre Boulle" },
   { title: "Star Trek", by: "Gene Roddenberry" },
   { title: "Star Wars", by: "George Lucas" },
