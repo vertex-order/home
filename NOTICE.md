@@ -54,5 +54,5 @@ Claude Design export; its upstream icon-set source hasn't been verified.
 - **Attribution:** `_TBD_`
 
 If you can identify the exact source, open a
-[Discussion](https://github.com/vertex-order/vertex-order.github.io/discussions)
+[Discussion](https://github.com/vertex-order/home/discussions)
 so this section can be filled in.

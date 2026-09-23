@@ -32,8 +32,8 @@ Vertex Order repo.
 ## Quick start
 
 ```sh
-git clone https://github.com/vertex-order/vertex-order.github.io
-cd vertex-order.github.io
+git clone https://github.com/vertex-order/home
+cd home
 # open site/page.dc.html in a browser — done, no build step
 ```
 
@@ -78,7 +78,7 @@ don't need the tool to edit it.
 Colours, fonts, spacing and radii are CSS custom properties at the top of
 [`site/_ds/nocturne-dd511f00-0314-498c-83ef-49f001a371b0/styles.css`](site/_ds/nocturne-dd511f00-0314-498c-83ef-49f001a371b0/styles.css)
 (vendored — don't hand-edit; start a
-[discussion](https://github.com/vertex-order/vertex-order.github.io/discussions)
+[discussion](https://github.com/vertex-order/home/discussions)
 if a token needs to change, it's shared by every Vertex Order site). The
 light-mode palette override lives in the `<style>` block of `page.dc.html`
 itself — this repo is the only one with a light theme tuned locally rather
@@ -136,7 +136,7 @@ real deploy output.
 
 ## Open a PR
 
-1. Raise it in [Discussions](https://github.com/vertex-order/vertex-order.github.io/discussions)
+1. Raise it in [Discussions](https://github.com/vertex-order/home/discussions)
    first and agree the change there. PRs without a linked Discussion (or
    issue) may be closed unreviewed.
 2. Fork, branch off `main`.
@@ -158,7 +158,7 @@ under MIT — the
 [Developer Certificate of Origin](https://developercertificate.org/).
 
 Questions and proposals go in
-[Discussions](https://github.com/vertex-order/vertex-order.github.io/discussions);
+[Discussions](https://github.com/vertex-order/home/discussions);
 issues are for collaborators.
 
 ## Appendix: repo layout

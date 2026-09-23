@@ -7,7 +7,7 @@ body:
       value: |
         Issues here are **only** for technical coordination between
         collaborators on a change that has already been raised and agreed in
-        [Discussions](https://github.com/vertex-order/vertex-order.github.io/discussions).
+        [Discussions](https://github.com/vertex-order/home/discussions).
 
         If you're proposing a new franchise placeholder, a link fix, or an
         FAQ change — start a Discussion instead. That's where the
@@ -17,7 +17,7 @@ body:
     attributes:
       label: Discussion link
       description: The Discussions thread where this change was raised and agreed.
-      placeholder: https://github.com/vertex-order/vertex-order.github.io/discussions/000
+      placeholder: https://github.com/vertex-order/home/discussions/000
     validations:
       required: true
   - type: textarea
