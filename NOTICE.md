@@ -2,11 +2,11 @@
 
 # NOTICE — third-party parts
 
-© 2026 Vertex Industries, with help from the community. This repo is
+© 2026 [Vertex Projects](https://vertexprojects.org), with help from the community. This repo is
 [MIT](LICENSE); the third-party parts below keep their own terms.
 
 The authoritative record of third-party parts used in this project — the
-[Vertex Order](https://vertex-order.github.io) org landing page.
+[Vertex Order](https://order.vertexprojects.org) org landing page.
 
 ## Design Component runtime
 

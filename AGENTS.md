@@ -22,7 +22,7 @@ and confirm with the user before proceeding.
 
 ## What this repo is
 
-The [Vertex Order](https://vertex-order.github.io) org landing page — a
+The [Vertex Order](https://order.vertexprojects.org) org landing page — a
 single page linking out to every franchise list, plus a shared FAQ. It's
 the lightest of the Vertex Order repos: no series data, no platform icons,
 no floating nav — just franchise link lists and two components pulled from

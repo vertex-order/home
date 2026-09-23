@@ -21,7 +21,7 @@ edit, preview in a browser, open a PR.
 
 ## What this repo is
 
-The [Vertex Order](https://vertex-order.github.io) org landing page — one
+The [Vertex Order](https://order.vertexprojects.org) org landing page — one
 page linking out to every game, movie/TV, and book franchise list this org
 maintains, plus a shared FAQ. It's the lightest of the Vertex Order repos:
 no series data, no platform icons, just link lists.

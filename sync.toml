@@ -19,7 +19,7 @@
 
 [subscribe.kit]
 repo = "vertex-order/kit"
-ref = "1d10b385f1e2386c9ad2318f1d1d549c86f1d290"
+ref = "7eb791b94b4a163f320fc0780de8189bde6d644d"
 paths = [
   "docs/cache.md",
   "docs/tooling.md",

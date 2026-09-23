@@ -1,6 +1,6 @@
 # vertex-order.github.io
 
-The [Vertex Order](https://vertex-order.github.io) org landing page — one
+The [Vertex Order](https://order.vertexprojects.org) org landing page — one
 page linking out to every game, movie/TV, and book franchise list, plus a
 shared FAQ.
 
