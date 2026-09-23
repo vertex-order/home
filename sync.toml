@@ -81,8 +81,11 @@ paths = [
   ".github/workflows/check-css.yml",
   ".github/workflows/check-syntax.yml",
   ".github/workflows/sync-repin.yml",
-  ".github/workflows/static.yml",
 ]
+# .github/workflows/static.yml deliberately not vendored -- kit's copy
+# self-deploys build/ straight to its own Pages site. This repo instead
+# pushes build/ into vertex-order/site's public/ (see sync-site.yml),
+# since it's the org root landing page, not a standalone Pages site.
 # .github/dependabot.yml deliberately not vendored/present -- everything it
 # would watch here (package.json, .github/workflows/*.yml) is a vendored
 # copy from kit, not owned here; see kit's dependabot.yml header comment.

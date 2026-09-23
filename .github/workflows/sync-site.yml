@@ -1,0 +1,56 @@
+# Not vendored -- this repo's build/deploy target diverges from kit's (see
+# sync.toml). Builds site/ and pushes build/ into vertex-order/site's
+# public/, instead of self-deploying to Pages.
+name: Sync site to Pages repo
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout home
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: home
+
+      - name: Install just
+        uses: extractions/setup-just@53165ef7e734c5c07cb06b3c8e7b647c5aa16db3 # v4
+
+      - name: Install Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: home/.node-version
+
+      - name: Build
+        working-directory: home
+        run: just build
+
+      - name: Checkout site
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ${{ github.repository_owner }}/site
+          token: ${{ secrets.SITE_DEPLOY_TOKEN }}
+          path: site-repo
+
+      - name: Sync build/ into public/
+        run: rsync -a home/build/ site-repo/public/
+
+      - name: Commit and push
+        working-directory: site-repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: sync root site from home"
+            git push
+          fi
