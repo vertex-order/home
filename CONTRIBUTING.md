@@ -32,8 +32,8 @@ Vertex Order repo.
 ## Quick start
 
 ```sh
-git clone https://github.com/vertex-order/home
-cd home
+git clone https://github.com/vertex-order/home vertex-order-home
+cd vertex-order-home
 # open site/page.dc.html in a browser — done, no build step
 ```
 
