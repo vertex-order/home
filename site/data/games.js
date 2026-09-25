@@ -20,6 +20,8 @@ window.GAME_FRANCHISES = [
   { title: "SaGa", by: "Square Enix" },
   { title: "Star Ocean", by: "Square Enix" },
   { title: "Super Mario", by: "Nintendo" },
+  { title: "The Last of Us", by: "Naughty Dog" },
   { title: "The Legend of Zelda", by: "Nintendo" },
   { title: "Tomb Raider" },
+  { title: "Uncharted", by: "Amy Hennig" },
 ];
