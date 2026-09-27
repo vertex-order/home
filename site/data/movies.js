@@ -2,6 +2,7 @@
 // schema: franchise-list.schema.json
 window.MOVIE_FRANCHISES = [
   { title: "Alien / Predator" },
+  { title: "Batman (Screen)", by: "DC Comics" },
   { title: "DC Cinematic Universe (DCU)" },
   { title: "Doctor Who" },
   { title: "Ghostbusters" },
@@ -13,9 +14,11 @@ window.MOVIE_FRANCHISES = [
   { title: "Mission Impossible" },
   { title: "Nikita", by: "Luc Besson" },
   { title: "Planet of the Apes", by: "Pierre Boulle" },
+  { title: "Spider-Man (Screen)", by: "Marvel Comics" },
   { title: "Star Trek", by: "Gene Roddenberry" },
   { title: "Star Wars", by: "George Lucas" },
   { title: "Stargate" },
+  { title: "Superman (Screen)", by: "DC Comics" },
   { title: "The Fast & Furious" },
   { title: "The Matrix", by: "The Wachowskis" },
   { title: "Transformers" },
