@@ -70,68 +70,90 @@ a:hover { color: var(--color-accent); text-decoration: underline; }
   <main style="max-width: 1040px; margin: 0 auto; padding: var(--space-8) var(--space-4);">
     <dc-import name="Intro" hint-size="auto,100px" style="display: block;"></dc-import>
 
+    <sc-if value="{{ gamesHasLive }}" hint-placeholder-val="{{ true }}">
     <h2 style="font-family: var(--font-heading); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-neutral-400); margin: 0 0 var(--space-3);">Game Franchises</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-bottom: var(--space-8);">
-      <sc-for list="{{ games }}" as="f" hint-placeholder-count="20">
-        <sc-if value="{{ f.linked }}" hint-placeholder-val="{{ false }}">
-          <a href="{{ f.href }}" class="card elev-sm" style="text-decoration: none; color: inherit; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-4);">
-            <div>
-              <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
-              <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
-            </div>
-            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="color: var(--color-accent-400); flex-shrink: 0;"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
-          </a>
-        </sc-if>
-        <sc-if value="{{ f.notLinked }}" hint-placeholder-val="{{ true }}">
-          <div class="card" style="opacity: 0.5;">
+      <sc-for list="{{ gamesLive }}" as="f" hint-placeholder-count="20">
+        <a href="{{ f.href }}" class="card elev-sm" style="text-decoration: none; color: inherit; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-4);">
+          <div>
             <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
             <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
           </div>
-        </sc-if>
+          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="color: var(--color-accent-400); flex-shrink: 0;"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
+        </a>
       </sc-for>
     </div>
+    </sc-if>
 
+    <sc-if value="{{ moviesHasLive }}" hint-placeholder-val="{{ true }}">
     <h2 style="font-family: var(--font-heading); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-neutral-400); margin: 0 0 var(--space-3);">Movie &amp; TV Franchises</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-bottom: var(--space-8);">
-      <sc-for list="{{ movies }}" as="f" hint-placeholder-count="17">
-        <sc-if value="{{ f.linked }}" hint-placeholder-val="{{ false }}">
-          <a href="{{ f.href }}" class="card elev-sm" style="text-decoration: none; color: inherit; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-4);">
-            <div>
-              <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
-              <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
-            </div>
-            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="color: var(--color-accent-400); flex-shrink: 0;"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
-          </a>
-        </sc-if>
-        <sc-if value="{{ f.notLinked }}" hint-placeholder-val="{{ true }}">
-          <div class="card" style="opacity: 0.5;">
+      <sc-for list="{{ moviesLive }}" as="f" hint-placeholder-count="17">
+        <a href="{{ f.href }}" class="card elev-sm" style="text-decoration: none; color: inherit; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-4);">
+          <div>
             <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
             <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
           </div>
-        </sc-if>
+          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="color: var(--color-accent-400); flex-shrink: 0;"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
+        </a>
       </sc-for>
     </div>
+    </sc-if>
 
+    <sc-if value="{{ booksHasLive }}" hint-placeholder-val="{{ true }}">
     <h2 style="font-family: var(--font-heading); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-neutral-400); margin: 0 0 var(--space-3);">Book Franchises</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3);">
-      <sc-for list="{{ books }}" as="f" hint-placeholder-count="22">
-        <sc-if value="{{ f.linked }}" hint-placeholder-val="{{ false }}">
-          <a href="{{ f.href }}" class="card elev-sm" style="text-decoration: none; color: inherit; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-4);">
-            <div>
-              <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
-              <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
-            </div>
-            <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="color: var(--color-accent-400); flex-shrink: 0;"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
-          </a>
-        </sc-if>
-        <sc-if value="{{ f.notLinked }}" hint-placeholder-val="{{ true }}">
-          <div class="card" style="opacity: 0.5;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-bottom: var(--space-8);">
+      <sc-for list="{{ booksLive }}" as="f" hint-placeholder-count="22">
+        <a href="{{ f.href }}" class="card elev-sm" style="text-decoration: none; color: inherit; display: flex; flex-direction: row; align-items: center; justify-content: space-between; gap: var(--space-4);">
+          <div>
             <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
             <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
           </div>
-        </sc-if>
+          <svg width="20" height="20" viewBox="0 0 256 256" fill="currentColor" style="color: var(--color-accent-400); flex-shrink: 0;"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path></svg>
+        </a>
       </sc-for>
     </div>
+    </sc-if>
+
+    <sc-if value="{{ helpWantedVisible }}" hint-placeholder-val="{{ true }}">
+    <h2 style="font-family: var(--font-heading); font-weight: 500; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-neutral-400); margin: 0 0 var(--space-3);">Help Wanted</h2>
+
+    <sc-if value="{{ gamesHasIdeas }}" hint-placeholder-val="{{ true }}">
+    <h3 style="font-family: var(--font-heading); font-weight: 500; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-neutral-400); opacity: 0.7; margin: 0 0 var(--space-3);">Games</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-bottom: var(--space-6);">
+      <sc-for list="{{ gamesIdeas }}" as="f" hint-placeholder-count="4">
+        <div class="card" style="opacity: 0.5;">
+          <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
+          <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ moviesHasIdeas }}" hint-placeholder-val="{{ true }}">
+    <h3 style="font-family: var(--font-heading); font-weight: 500; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-neutral-400); opacity: 0.7; margin: 0 0 var(--space-3);">Movies &amp; TV</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-bottom: var(--space-6);">
+      <sc-for list="{{ moviesIdeas }}" as="f" hint-placeholder-count="4">
+        <div class="card" style="opacity: 0.5;">
+          <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
+          <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ booksHasIdeas }}" hint-placeholder-val="{{ true }}">
+    <h3 style="font-family: var(--font-heading); font-weight: 500; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-neutral-400); opacity: 0.7; margin: 0 0 var(--space-3);">Books</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: var(--space-3); margin-bottom: var(--space-6);">
+      <sc-for list="{{ booksIdeas }}" as="f" hint-placeholder-count="4">
+        <div class="card" style="opacity: 0.5;">
+          <div class="card-title" style="font-size: 18px; margin-bottom: 2px;">{{ f.title }}</div>
+          <sc-if value="{{ f.byLabel }}" hint-placeholder-val="{{ false }}"><div class="card-meta">{{ f.byLabel }}</div></sc-if>
+        </div>
+      </sc-for>
+    </div>
+    </sc-if>
+    </sc-if>
 
     <div style="margin: var(--space-8) 0 var(--space-6);">
       <dc-import name="FAQ" items="{{ faqItems }}" hint-size="100%,220px"></dc-import>
@@ -147,23 +169,39 @@ a:hover { color: var(--color-accent); text-decoration: underline; }
 <script type="text/x-dc" data-dc-script>
 function mapFranchise(f) {
   const byLabel = f.by ? ('by ' + f.by + (f.firstPublished ? ' \u00b7 ' + f.firstPublished : '')) : null;
-  return { title: f.title, href: f.href, byLabel, linked: !!f.href, notLinked: !f.href };
+  return { title: f.title, href: f.href, byLabel };
 }
 
-function liveFirst(list) {
+function splitLive(list) {
   const mapped = list.map(mapFranchise);
-  return mapped.filter(f => f.linked).concat(mapped.filter(f => !f.linked));
+  return {
+    live: mapped.filter(f => f.href),
+    ideas: mapped.filter(f => !f.href),
+  };
 }
 
 class Component extends DCLogic {
   renderVals() {
     const SITE = window.SITE_CONFIG || {};
+    const games = splitLive(window.GAME_FRANCHISES || []);
+    const movies = splitLive(window.MOVIE_FRANCHISES || []);
+    const books = splitLive(window.BOOK_FRANCHISES || []);
     return {
       metaTitle: SITE.title || 'Vertex Order',
       metaDescription: SITE.description || '',
-      games: liveFirst(window.GAME_FRANCHISES || []),
-      movies: liveFirst(window.MOVIE_FRANCHISES || []),
-      books: liveFirst(window.BOOK_FRANCHISES || []),
+      gamesLive: games.live,
+      gamesHasLive: games.live.length > 0,
+      moviesLive: movies.live,
+      moviesHasLive: movies.live.length > 0,
+      booksLive: books.live,
+      booksHasLive: books.live.length > 0,
+      gamesIdeas: games.ideas,
+      gamesHasIdeas: games.ideas.length > 0,
+      moviesIdeas: movies.ideas,
+      moviesHasIdeas: movies.ideas.length > 0,
+      booksIdeas: books.ideas,
+      booksHasIdeas: books.ideas.length > 0,
+      helpWantedVisible: games.ideas.length > 0 || movies.ideas.length > 0 || books.ideas.length > 0,
       faqItems: window.FAQ_ITEMS || [],
       footerLicense: [{ text: 'This page is ' }, { text: 'MIT', url: 'https://github.com/vertex-order/home/blob/main/LICENSE' }, { text: ' licensed.' }],
       footerNoticeUrl: 'https://github.com/vertex-order/home/blob/main/NOTICE.md',
