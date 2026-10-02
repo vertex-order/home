@@ -19,7 +19,7 @@
 
 [subscribe.kit]
 repo = "vertex-order/kit"
-ref = "f7d45f5291d9493d35aeb13c0ac5e73f4e83489e"
+ref = "74cb689e0f3b9e12e0e201d10f5a60bc68472a87"
 paths = [
   "docs/cache.md",
   "docs/tooling.md",
@@ -45,6 +45,7 @@ paths = [
   "scripts/js_literal.py",
   "scripts/validate-data.py",
   "scripts/check-dedup-drift.py",
+  "scripts/check-anchors.py",
   "scripts/normalize-svg.py",
   "scripts/restore-headers.py",
   "scripts/ensure-helmets.py",

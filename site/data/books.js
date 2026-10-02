@@ -1,7 +1,6 @@
 // Book franchises. Each entry: { title, by (optional), href (optional), firstPublished (optional year) }.
 // schema: franchise-list.schema.json
 window.BOOK_FRANCHISES = [
-  { title: "A Song of Ice and Fire", by: "George R. R. Martin" },
   { title: "Cosmere", by: "Brandon Sanderson" },
   { title: "Discworld", by: "Terry Pratchett" },
   { title: "Dragonriders of Pern", by: "McCaffrey" },
@@ -9,8 +8,10 @@ window.BOOK_FRANCHISES = [
   { title: "Earthsea", by: "Ursula K. Le Guin" },
   { title: "Ender saga", by: "Orson Scott Card" },
   { title: "Foundation", by: "Isaac Asimov" },
+  { title: "Game of Thrones", by: "George R. R. Martin" },
   { title: "Ghost in the Shell", by: "Masamune Shirow" },
   { title: "Harry Potter", by: "J. K. Rowling" },
+  { title: "Lord of the Rings (Tolkien's Legendarium)", by: "J. R. R. Tolkien" },
   { title: "Sherlock Holmes", by: "Arthur Conan Doyle" },
   { title: "The Chronicles of Narnia", by: "C. S. Lewis" },
   { title: "The Dresden Files", by: "Jim Butcher" },
@@ -23,6 +24,5 @@ window.BOOK_FRANCHISES = [
   { title: "The Witcher", by: "Andrzej Sapkowski" },
   { title: "The Wonderful Wizard of Oz", by: "L. Frank Baum" },
   { title: "Thursday Next", by: "Jasper Fforde" },
-  { title: "Tolkien's legendarium" },
   { title: "Vorkosigan Saga", by: "Lois McMaster Bujold" },
 ];
