@@ -19,7 +19,7 @@
 
 [subscribe.kit]
 repo = "vertex-order/kit"
-ref = "74cb689e0f3b9e12e0e201d10f5a60bc68472a87"
+ref = "7ee4285d21bd0103005eaba12797ff1957ed7183"
 paths = [
   "docs/cache.md",
   "docs/tooling.md",
@@ -64,6 +64,7 @@ paths = [
   ".vscode/extensions.json",
   ".claude/settings.json",
   "CODE_OF_CONDUCT.md",
+  "AGENTS.md",
   ".githooks/pre-commit",
   ".github/workflows/fix-build.yml",
   ".github/workflows/autofix.yml",
