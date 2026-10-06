@@ -18,4 +18,4 @@ Plain HTML / CSS / JS, no build step, no Node. Open
 
 [MIT](LICENSE) — see [NOTICE.md](NOTICE.md) for the third-party parts.
 Contributor guide: [CONTRIBUTING.md](CONTRIBUTING.md). Notes for AI coding
-tools: [AGENTS.md](AGENTS.md) and [`.claude/CLAUDE.md`](.claude/CLAUDE.md).
+tools: [AGENTS.md](AGENTS.md).
